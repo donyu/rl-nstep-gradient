@@ -17,7 +17,7 @@ def test_tile():
         env.observation_space.low,
         env.observation_space.high,
         num_tilings=10,
-        tile_width=np.array([.451,.0351]))
+        tile_width=np.array([.45,.035]))
 
     semi_gradient_n_step_td(env,1.,policy,10,0.01,V,1000)
 
@@ -39,5 +39,5 @@ def test_nn():
     assert np.allclose(Vs,correct_values,0.20,5.), f'{correct_values} != {Vs}, but it might due to stochasticity'
 
 if __name__ == "__main__":
-    # test_tile()
+    test_tile()
     test_nn()
