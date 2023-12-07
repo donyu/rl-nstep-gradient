@@ -1,8 +1,6 @@
 import numpy as np
 from algo import ValueFunctionWithApproximation
 
-import tensorflow as tf
-
 class ValueFunctionWithNN(ValueFunctionWithApproximation):
     def __init__(self,
                  state_dims):
